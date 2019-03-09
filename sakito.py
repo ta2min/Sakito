@@ -5,6 +5,7 @@ from selenium.webdriver.chrome.options import Options
 
 EMAIL = 'Your e-mail address' 
 PASSWORD = 'Your password'
+CHROMEDRIVER_PATH = '/paht/to/chromedriver'
 
 options = Options()
 options.add_argument('-headless')
@@ -12,7 +13,7 @@ options.add_argument('--no-sandox')
 options.add_argument('--disable-setuid-sandbox')
 
 
-driver = webdriver.Chrome("/usr/bin/chromedriver", chrome_options=options)
+driver = webdriver.Chrome(CHROMEDRIVER_PATH, chrome_options=options)
 driver.get('https://sakito.cirkit.jp/user/sign_in')
 
 # ログイン
